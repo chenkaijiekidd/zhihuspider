@@ -42,6 +42,8 @@ plt.figure(figsize=(20, 6), dpi=80)
 plt.subplot(1, 1, 1)
 # 柱子总数
 N = len(area_dict.keys())
+#按照value排序
+area_dict = dict(sorted(area_dict.items(), key=lambda x:x[1], reverse=True))
 # 包含每个柱子对应值的序列
 values = (area_dict.values())
 # 包含每个柱子下标的序列
@@ -58,7 +60,7 @@ plt.ylabel('数量')
 plt.title('地区统计')
 # 添加纵横轴的刻度
 plt.xticks(index, (area_dict.keys()))
-plt.yticks(np.arange(0, 20, 5))
+plt.yticks(np.arange(0, 40, 5))
 # 添加图例
 plt.legend(loc="upper right")
 plt.rcParams['font.sans-serif'] = ['Heiti TC'] #用来正常显示中文标签
@@ -72,6 +74,8 @@ plt.figure(figsize=(30, 6), dpi=80)
 plt.subplot(1, 1, 1)
 # 柱子总数
 N = len(business_dict.keys())
+#按照value排序
+business_dict = dict(sorted(business_dict.items(), key=lambda x:x[1], reverse=True))
 # 包含每个柱子对应值的序列
 values = (business_dict.values())
 # 包含每个柱子下标的序列
@@ -88,7 +92,7 @@ plt.ylabel('数量')
 plt.title('行业统计')
 # 添加纵横轴的刻度
 plt.xticks(index, (business_dict.keys()))
-plt.yticks(np.arange(0, 20, 5))
+plt.yticks(np.arange(0, 40, 5))
 # 添加图例
 plt.legend(loc="upper right")
 plt.rcParams['font.sans-serif'] = ['Heiti TC'] #用来正常显示中文标签
