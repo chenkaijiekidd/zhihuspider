@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
-
+"""
+@Time : 2019-08-12 11:24
+@Author : kidd
+@Site : http://www.bwaiedu.com/
+@File : pipelines.py
+@公众号: 蓝鲸AI教育 bwaiedu
+"""
 # Define your item pipelines here
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
