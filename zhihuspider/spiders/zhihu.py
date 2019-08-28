@@ -20,8 +20,10 @@ class ZhihuSpider(scrapy.Spider):
     name = 'zhihu'
     allowed_domains = ['zhihu.com']
     topic_ids = [
-        # '20190270',  # 长安十二时辰
-        '20230794'  # 亲爱的，热爱的
+        '20190270',  # 长安十二时辰
+        #'20230794'  # 亲爱的，热爱的
+        #'20758178'  #哪吒
+        #'20671721'  #小欢喜
     ]
     # 话题粉丝列表url
     topic_follower_list_url = 'https://www.zhihu.com/api/v4/topics/{0}/followers?include=data' \
@@ -35,7 +37,7 @@ class ZhihuSpider(scrapy.Spider):
     # 用户详细信息url
     detail_info_url = 'https://www.zhihu.com/people/{}/activities'
     # 爬取粉丝层数
-    crawl_follower_depth = 0
+    crawl_follower_depth = 1
 
     def start_requests(self):
         """
